@@ -1,0 +1,204 @@
+/*------------- Global --------------*/
+
+body {
+    text-align: center;
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-family: "Lexend Deca", sans-serif;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 70px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1.06em;
+    padding: 1.8em 0.4em;
+    color: black;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+footer p {
+    color: black;
+}
+
+/*------------------Flex----------------*/
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: 500px;
+    width: 1000px;
+}
+
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 0px 0px 10px;
+    padding: 45px;
+    text-align: left;
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+    padding: 45px;
+    text-align: left;
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0px 10px 10px 0px;
+    padding: 45px;
+    text-align: left;
+}
+
+img {
+    padding-bottom: 25px;
+}
+
+main p,
+h1 {
+    color: hsla(0, 0%, 100%, 0.75);
+    padding-bottom: 25px;
+    line-height: 1.6;
+}
+
+h1 {
+    @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Lexend+Deca&family=Roboto&display=swap");
+    font-family: "Big Shoulders Display", cursive;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-family: "Lexend Deca", sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+
+main p {
+    @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kdam+Thmor+Pro&family=Lexend+Deca&family=Roboto&display=swap");
+    font-family: "Big Shoulders Display", cursive;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-family: "Lexend Deca", sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+
+.buttons {
+    background-color: hsl(0, 0%, 95%);
+    border: 1px solid hsl(0, 0%, 95%);
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin-top: 25px;
+}
+
+#buttonSedans {
+    color: hsl(31, 77%, 52%);
+}
+
+#buttonSuvs {
+    color: hsl(184, 100%, 22%);
+}
+
+#buttonLuxury {
+    color: hsl(179, 100%, 13%);
+}
+
+/*-----------------Grid------------------*/
+.grid-container {
+    margin: auto;
+    height: 400px;
+    width: 650px;
+    display: grid;
+    grid-template-areas:
+        "red1 red1 red1 red1 orange2 orange2"
+        "red1 red1 red1 red1 orange2 orange2"
+        "green3 green3 green3 blue1 blue1 blue1"
+        "green3 green3 green3 blue2 blue2 blue2";
+    gap: 8px;
+}
+
+.item-red {
+    background-color: #c94312;
+    grid-area: red1;
+}
+
+.item-orange {
+    background-color: orange;
+    grid-area: orange2;
+}
+
+.item-green {
+    background-color: green;
+    grid-area: green3;
+}
+
+.item-blueS {
+    background-color: #00bfff;
+    grid-area: blue1;
+}
+
+.item-blueB {
+    background-color: #00bfff;
+    grid-area: blue2;
+}
+
+/*------------------ media -----------------------*/
+
+@media (max-width: 700px) {
+    main {
+        margin: 50px 70px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        background-color: hsl(0, 0%, 95%);
+        text-align: center;
+    }
+
+    footer {
+        display: none;
+        margin-bottom: 30px;
+    }
+
+    .sedans {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .luxury {
+        border-radius: 0px 0px 10px 10px;
+        margin-bottom: 30px;
+    }
+}
